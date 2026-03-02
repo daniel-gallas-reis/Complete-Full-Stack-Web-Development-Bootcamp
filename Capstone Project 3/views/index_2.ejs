@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 1</title>
+</head>
+<body>
+    <h1>This is a test page</h1>
+
+    <button><a href="/submit">Send a Post</a></button>
+
+    <% if (locals.posts.length > 0) { %>
+        
+    <% for (let index = 0; index < posts.length; index++) { %>
+        
+        <p>Name: <%= posts[index].name %></p>
+        <p>Local: <%= posts[index].local %></p>
+        <p>Date: <%= posts[index].date %></p>
+        <p>Text: <%= posts[index].text %></p>
+        
+    <% } %>
+    <% } %>
+     
+</body>
+</html>

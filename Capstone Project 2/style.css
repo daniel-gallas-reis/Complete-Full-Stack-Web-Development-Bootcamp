@@ -1,0 +1,18 @@
+.hero{
+    background-image: url(assets/images/pexels-pixabay-461593.jpg);
+    height: 700px;
+}
+#profile-title{
+    color: blue;
+}
+
+hr{
+    border: dotted grey 6px;
+    border-bottom: none;
+    width: 100px;
+}
+
+.dotted-hr{
+    display: flex;
+    justify-content: center;
+}
