@@ -33,7 +33,11 @@ app.post("/add", async(req, res) => {
   const newCountry = req.body.country;
   const codee = await getCountries(newCountry);
   //const newCountryCode = await db.query("SELECT country_code FROM countries WHERE country name = $1", [newCountry]);
-  await db.query("INSERT INTO visited_countries (country_code) VALUES ($1)", [codee]);
+  try {
+    await db.query("INSERT INTO visited_countries (country_code) VALUES ($1)", [codee]);
+  } catch (error) {
+    res.render("index.ejs", {error: "Country not found or not exist.", total: places.length, countries: places});
+  }
   res.redirect("/");
 
 });
