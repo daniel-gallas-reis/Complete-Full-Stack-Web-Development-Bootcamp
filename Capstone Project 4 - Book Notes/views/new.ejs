@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New User</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/new.css" />
+  </head>
+
+  <% if(locals.editedBook){ %>
+  <body>
+    <h1>Add New Book Notes</h1>
+    <form action="/saveEdit" method="post">
+      <p>What's your name?</p>
+      <input type="text" name="author" value="<%=locals.editedBook.author%>" />
+
+      <p>What is the book name?</p>
+      <input type="text" name="title" value="<%=locals.editedBook.title%>" />
+
+      <p>What is the book category?</p>
+      <input type="text" name="category" value="<%=locals.editedBook.category%>" />
+
+      <p>What is the book ISBN?</p>
+      <input type="text" name="isbn" value="<%=locals.editedBook.isbn%>" />
+
+      <p>Rate the Book</p>
+      
+      <input type="radio" name="rate" id="red" value="0" />
+      <label for="red"><span class="red">0</span></label>
+
+      <input type="radio" name="rate" id="green" value="1" />
+      <label for="green"><span class="green">1</span></label>
+
+      <input type="radio" name="rate" id="yellow" value="2" />
+      <label for="yellow"><span class="yellow">2</span></label>
+
+      <input type="radio" name="rate" id="olive" value="3" />
+      <label for="olive"><span class="olive">3</span></label>
+
+      <input type="radio" name="rate" id="orange" value="4" />
+      <label for="orange"><span class="orange">4</span></label>
+
+      <input type="radio" name="rate" id="teal" value="5" />
+      <label for="teal"><span class="teal">5</span></label>
+
+      <input type="radio" name="rate" id="blue" value="6" />
+      <label for="blue"><span class="blue">6</span></label>
+
+      <input type="radio" name="rate" id="violet" value="7" />
+      <label for="violet"><span class="violet">7</span></label>
+
+      <input type="radio" name="rate" id="purple" value="8" />
+      <label for="purple"><span class="purple">8</span></label>
+
+      <input type="radio" name="rate" id="pink" value="9" />
+      <label for="pink"><span class="pink">9</span></label>
+
+      <input type="radio" name="rate" id="aquamarine" value="10" />
+      <label for="aquamarine"><span class="aquamarine">10</span></label>
+
+      <p>Take some notes</p>
+      <input type="text" name="notes" value="<%=locals.editedBook.notes%>" />
+
+
+      <div class="spacer"></div>
+      <button type="submit">Add</button>
+      </form>
+
+      <% }else{ %>
+
+        <body>
+    <h1>Add New Book Notes</h1>
+    <form action="/save" method="post">
+      <p>What's your name?</p>
+      <input type="text" name="author" />
+
+      <p>What is the book name?</p>
+      <input type="text" name="title" />
+
+      <p>What is the book category?</p>
+      <input type="text" name="category" />
+
+      <p>What is the book ISBN?</p>
+      <input type="text" name="isbn" />
+
+      <p>Rate the Book</p>
+      
+      <input type="radio" name="rate" id="red" value="0" />
+      <label for="red"><span class="red">0</span></label>
+
+      <input type="radio" name="rate" id="green" value="1" />
+      <label for="green"><span class="green">1</span></label>
+
+      <input type="radio" name="rate" id="yellow" value="2" />
+      <label for="yellow"><span class="yellow">2</span></label>
+
+      <input type="radio" name="rate" id="olive" value="3" />
+      <label for="olive"><span class="olive">3</span></label>
+
+      <input type="radio" name="rate" id="orange" value="4" />
+      <label for="orange"><span class="orange">4</span></label>
+
+      <input type="radio" name="rate" id="teal" value="5" />
+      <label for="teal"><span class="teal">5</span></label>
+
+      <input type="radio" name="rate" id="blue" value="6" />
+      <label for="blue"><span class="blue">6</span></label>
+
+      <input type="radio" name="rate" id="violet" value="7" />
+      <label for="violet"><span class="violet">7</span></label>
+
+      <input type="radio" name="rate" id="purple" value="8" />
+      <label for="purple"><span class="purple">8</span></label>
+
+      <input type="radio" name="rate" id="pink" value="9" />
+      <label for="pink"><span class="pink">9</span></label>
+
+      <input type="radio" name="rate" id="aquamarine" value="10" />
+      <label for="aquamarine"><span class="aquamarine">10</span></label>
+
+      <p>Take some notes</p>
+      <input type="text" name="notes" />
+      <div class="spacer"></div>
+            <button type="submit">Add</button>
+          </form>
+        <% } %>
+      
+  </body>
+</html>
